@@ -1,7 +1,10 @@
 * State Transitions using Aggregate Markov Models
 
 ** Installation
-Please download the *stamm_[version].tar.gz* and install package in R.
+Please download the *stamm_[version].tar.gz* and install package in R using:
+#+BEGIN_SRC R
+install.packages(file_name_and_path, repos = NULL, type="source")
+#+END_SRC
 
 ** Load Package anad Data
 Once installed you can load the package with

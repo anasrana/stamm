@@ -48,9 +48,6 @@ StammMSEcv.K <- function(g.dat, t.dat, k.states=1:5, hat.m=13, n.core=50, l.pen=
     names(fit.cv) <- paste("K=", k.states, sep="")
     names(mse) <- paste("K=", k.states, sep="")
     
-    fit <- FitClGns(g.dat, t.dat, l.pen=l.pen, k.stt=k.states[i.k],
-                               m=m.cl[i.m], pll=TRUE, n.core=n.core)
-
     hat.K <- k.states[which(mse == min(mse))]
 
     if (hat.K != max(k.states)){

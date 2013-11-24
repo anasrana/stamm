@@ -89,10 +89,10 @@ mse.p <- ggplot(mse.df, aes(x=k, y=mse)) +
 return(mse.p)
 }
 
-StammStab.plot <- function(fit.k, m.v, m.init=2) {
+StammStab.plot <- function(fit.k, m.v, m.init=2, k.states=1:5) {
 
 if (m.init > 1)
-    m.v <- m.cl[-(1:(m.init -1))]
+    m.v <- m.v[-(1:(m.init -1))]
 f.corr <- matrix(NA, length(fit.k), length(m.v))
 for (i.k in 1:length(fit.k)) {
     fit <- fit.k[[i.k]]
@@ -115,7 +115,7 @@ return(stab.m)
 
 StammStabPen.plot <- function(fit, fit.m, t.dat) {
 
-beta=(as.vector(fit$fit.genes$beta))
+    beta=(as.vector(fit$fit.g$beta))
 type <- rep(gsub('[^0-9]', "", names(fit.m$fit.genes), perl=TRUE), each=length(beta))
 beta.vec <- NULL
 for (i in 1:(length(t.dat) - 1)){
