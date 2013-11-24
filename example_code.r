@@ -15,7 +15,7 @@ fit.K <- StammMSEcv.K(g.dat, t.dat, k.states=k.stt, hat.m=13, n.core=50, l.pen=0
 fit.m <- StammMSEcv.m(g.dat, t.dat, m.cl=m.cl, k.states=k.stt, n.core=50, l.pen=0)
 
 MSE.cv <- StammMSEcvK.plot(fit.K$mse.cv, k.states=k.stt)
-print(MSE.p)
+print(MSE.cv)
 Stab.m <- StammStab.plot(fit.m$fit, m.v=m.cl, m.init=2, k.states=k.stt)
 print(Stab.m)
 i.k <- which(k.stt==fit.K$hat.K)
