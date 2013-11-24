@@ -1,0 +1,20 @@
+* State Transitions using Aggregate Markov Models
+
+** Installation
+Please download the *stamm_[version].tar.gz* and install package in R.
+
+** Load Package anad Data
+Once installed you can load the package with
+#+BEGIN_SRC R
+library(stamm)
+#+END_SRC
+
+There is a demo data set included in the package you can load them as follows:
+#+BEGIN_SRC R
+data(gdat) # simulated expression data
+data(tdat) # time points
+data(sim_data) # full simulation data
+#+END_SRC
+
+** Example code
+Also included is an example code file to obain main results

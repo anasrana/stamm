@@ -63,14 +63,14 @@ DLmse <- function(fit, loop.var, t.dat, g.dat) {
 StammKmeans.plot <- function(DeltaJ, m.vec, x.lab='No. of clusters, m', y.lab=expression(paste(Delta, "J")), p.title=" ") {
 
     km.cl <- data.frame(m=m.vec, within.ss=DeltaJ)
-    ggplot(km.cl, aes(x=m, y=within.ss)) +
+    km.plot <- ggplot(km.cl, aes(x=m, y=within.ss)) +
         geom_hline(aes(yintercept=0.1), col='gray', size=1.5, linetype='dashed') +
             geom_point(size=4) +
                 geom_line() +
                     xlab(x.lab) +
                         ylab(y.lab) +
                             ggtitle(p.title)
-    return(km.cl)
+    return(km.plot)
 }
 
 ## ********************************************************************************
