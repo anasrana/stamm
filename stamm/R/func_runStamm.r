@@ -20,7 +20,7 @@ StammKmeans <- function(g.dat, m.v=2:30, iter.max=1000, nstart=500) {
         within.ss[i.m] <- g.km$tot.withinss
     }
 
-    J <- within.ss[-1] / within.ss[1:28]
+    J <- within.ss[-1] / within.ss[1:(length(within.ss) - 1)]
 
     kmeans.plot <- StammKmeans.plot(1-J, m.v[-1], x.lab='No. of clusters, m',
                                     y.lab=expression(paste(Delta, "J")), p.title=" ")
